@@ -1,0 +1,54 @@
+{
+  "name": "panels-feed",
+  "version": "0.1.0",
+  "description": "a feed in panels",
+  "main": "index.js",
+  "scripts": {
+    "test": ".bin/test",
+    "prepublish": ".bin/compile",
+    "postpublish": ".bin/clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UXtemple/panels-feed"
+  },
+  "keywords": [
+    "panels",
+    "feed",
+    "UXtemple"
+  ],
+  "author": "UXtemple <hi@uxtemple.com>",
+  "contributors": [
+    "Darío Javier Cravero <dario@uxtemple.com>",
+    "Tom Parandyk <tom@uxtemple.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UXtemple/panels-feed/issues"
+  },
+  "homepage": "https://github.com/UXtemple/panels-feed",
+  "dependencies": {
+    "envify": "^3.4.0",
+    "flummox": "^4.0.0-alpha",
+    "immutable": "^3.7.2",
+    "react": "^0.13.2",
+    "react-native": "^0.4.1"
+  },
+  "devDependencies": {
+    "babel": "^5.2.9",
+    "babelify": "^6.0.2",
+    "browserify": "^10.0.0",
+    "envify": "^3.4.0",
+    "livereloadify": "^2.0.0",
+    "mocha": "^2.2.4",
+    "node-static": "^0.7.6",
+    "sinon": "^1.14.1",
+    "watchify": "^3.2.1"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "envify"
+    ]
+  }
+}
