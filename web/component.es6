@@ -1,5 +1,5 @@
 import React from 'react';
-import CardRecord from '../card-record';
+import CardRecord from '../records/card';
 
 export default class Feed extends React.Component {
   render() {

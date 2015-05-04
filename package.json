@@ -6,7 +6,8 @@
   "scripts": {
     "test": ".bin/test",
     "prepublish": ".bin/compile",
-    "postpublish": ".bin/clean"
+    "postpublish": ".bin/clean",
+    "start": ".bin/start"
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "watchify": "^3.2.1"
   },
   "browserify": {
+    "extensions": [".es6"],
     "transform": [
       "babelify",
       "envify"

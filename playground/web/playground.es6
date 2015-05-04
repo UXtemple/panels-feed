@@ -1,7 +1,7 @@
 import DUMMY_DATA from '../../dummy-data';
 import * as Flummox from 'flummox';
 import FluxComponent from 'flummox/component';
-import * as PanelsFeed from '../../';
+import * as PanelsFeed from '../../index';
 import React from 'react';
 
 let Playground = {

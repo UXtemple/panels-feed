@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-
-./node_modules/.bin/watchify -o ./playground/web/playground.js -v -d playground/web/playground.es6

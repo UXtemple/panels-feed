@@ -1,5 +1,6 @@
 import Component from './component';
 import FluxComponent from 'flummox/component';
+import React from 'react';
 
 export default class FeedContainer extends React.Component {
   get stores() {
