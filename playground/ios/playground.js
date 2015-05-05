@@ -1,0 +1,1 @@
+console.error("\n/Users/craverod/opensource/panels/panels-feed/playground/ios/playground.es6:1\nimport DUMMY_DATA from '../../dummy-data';\n^\nParseError: 'import' and 'export' may appear only with 'sourceType: module'");

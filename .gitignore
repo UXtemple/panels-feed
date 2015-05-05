@@ -4,6 +4,7 @@ node_modules
 **.js
 
 playground/ios/node_modules
+!playground/ios/playground.js
 
 # Xcode
 #
