@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+.bin/compile --watch &
 ./node_modules/.bin/watchify -o ./playground/web/playground.js -v -d playground/web/playground.es6 &
 ./node_modules/.bin/livereloadify ./playground/web &
 ./node_modules/.bin/static ./playground/web --port 3000 --cache 0

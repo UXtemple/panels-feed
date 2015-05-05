@@ -1,9 +1,6 @@
-node_modules
+# OSX
+#
 .DS_Store
-*.log
-**.js
-
-playground/ios/node_modules
 
 # Xcode
 #
@@ -24,3 +21,8 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+
+# node.js
+#
+node_modules/
+npm-debug.log
