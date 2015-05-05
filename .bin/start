@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
+
+WEB=./playground/web
+
 .bin/compile --watch &
-./node_modules/.bin/watchify -o ./playground/web/playground.js -v -d playground/web/playground.es6 &
-./node_modules/.bin/livereloadify ./playground/web &
-./node_modules/.bin/static ./playground/web --port 3000 --cache 0
+./node_modules/.bin/watchify --no-bundle-external -o $WEB/playground.js -v -d $WEB/playground.es6 &
+./node_modules/.bin/watchify `.bin/extract-dependencies` \
+  -r flummox/component -v -o $WEB/vendor.js ./package.json &
+./node_modules/.bin/livereloadify $WEB &
+./node_modules/.bin/static $WEB --port 3000 --cache 0

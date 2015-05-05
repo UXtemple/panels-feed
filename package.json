@@ -41,11 +41,14 @@
     "livereloadify": "^2.0.0",
     "mocha": "^2.2.4",
     "node-static": "^0.7.6",
+    "react-native": "^0.4.1",
     "sinon": "^1.14.1",
     "watchify": "^3.2.1"
   },
   "browserify": {
-    "extensions": [".es6"],
+    "extensions": [
+      ".es6"
+    ],
     "transform": [
       "babelify",
       "envify"

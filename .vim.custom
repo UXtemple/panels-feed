@@ -3,4 +3,4 @@
 "     so .vim.custom
 " endif
 
-let NERDTreeIgnore = ['\.js']
+let NERDTreeIgnore = ['\.js$']
