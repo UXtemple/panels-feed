@@ -5,7 +5,10 @@ import React from 'react';
 export default class FeedContainer extends React.Component {
   get stores() {
     return {
-      feed: store => ({cards: store.cards})
+      feed: store => ({
+        cards: store.cards,
+        types: store.types
+      })
     };
   }
 

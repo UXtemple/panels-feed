@@ -5,4 +5,8 @@ export default class FeedActions extends Actions {
   loadCards(cards) {
     return cards.map(card => new CardRecord(card));
   }
+
+  loadTypes(types) {
+    return types;
+  }
 }

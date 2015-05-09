@@ -3,15 +3,21 @@ import React from 'react';
 
 export default class Feed extends React.Component {
   render() {
-    let cards = this.props.cards.map(card => <div key={card.id}>{JSON.stringify(card)}</div>);
+    let cards = this.props.cards.map((card) => {
+      const Type = this.props.types[card.type];
+      return <Type key={card.id} id={card.id} />
+    });
 
     return <div>{cards}</div>;
   }
 }
 
 Feed.propTypes = {
-  cards: React.PropTypes.arrayOf(CardRecord)
+  cards: React.PropTypes.arrayOf(CardRecord),
+  types: React.PropTypes.objectOf(React.PropTypes.element)
 }
+
 Feed.defaultProps = {
-  cards: []
+  cards: [],
+  types: {}
 }
