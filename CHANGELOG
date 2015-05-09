@@ -1,0 +1,17 @@
+# Change Log
+
+## [0.1.0] - 2015-05-09
+
+### Added
+
+- Base structure
+- Actions
+- Store
+- Records:
+  - State
+  - Feed
+  - Card
+- Base flux app
+- Dummy data
+- iOS component, container and playground
+- Web component, container and playground

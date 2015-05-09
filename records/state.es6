@@ -1,6 +1,6 @@
-import { Record, List } from 'immutable';
+import { Map, Record } from 'immutable';
 
 export default class StateRecord extends Record({
-  cards: List(),
-  types: {}
+  feeds: Map(),
+  types: Map()
 }) {};

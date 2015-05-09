@@ -4,11 +4,11 @@ import React from 'react';
 export default class Feed extends React.Component {
   render() {
     let cards = this.props.cards.map((card) => {
-      const Type = this.props.types[card.type];
-      return <Type key={card.id} id={card.id} />
+      const Type = this.props.types.get(card.type);
+      return <Type key={card.id} id={card.id} />;
     });
 
-    return <div>{cards}</div>;
+    return <div>{cards.toArray()}</div>;
   }
 }
 

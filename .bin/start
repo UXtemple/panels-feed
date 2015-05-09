@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-
+IOS=./playground/ios
 WEB=./playground/web
 
-.bin/compile --watch &
-./node_modules/.bin/watchify --no-bundle-external -o $WEB/playground.js -v -d $WEB/playground.es6 &
+./node_modules/.bin/watchify --no-bundle-external --extension .es6 -o $IOS/playground.js -v -d $IOS/playground.es6 &
+./node_modules/.bin/watchify --no-bundle-external --extension .es6 -o $WEB/playground.js -v -d $WEB/playground.es6 &
 ./node_modules/.bin/watchify `.bin/extract-dependencies` \
-  -r flummox/component -v -o $WEB/vendor.js ./package.json &
+  -r react/addons -r flummox/component/web -v -o $WEB/vendor.js ./package.json &
 ./node_modules/.bin/livereloadify $WEB &
 ./node_modules/.bin/static $WEB --port 3000 --cache 0

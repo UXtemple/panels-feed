@@ -1,13 +1,30 @@
-import DUMMY_DATA from '../dummy-data';
 import * as Flummox from 'flummox';
-import FluxComponent from 'flummox/component';
 import * as PanelsFeed from '../../index';
 import { Container as FeedContainer } from '../../web';
+import DUMMY_DATA from '../dummy-data';
+import FluxComponent from 'flummox/component/web';
+import Immutable from 'immutable';
 import React from 'react';
+import TYPES from './types';
+
+const flux = new PanelsFeed.App();
+const feedActions = flux.getActions('feed');
+feedActions.loadFeeds(DUMMY_DATA);
+feedActions.loadTypes(TYPES);
+
+React.render(
+  <FluxComponent flux={flux}>
+    <FeedContainer id='properties' />
+    <FeedContainer id='boxhouse' />
+  </FluxComponent>,
+  document.getElementById('playground-container')
+);
 
 let Playground = {
+  flux,
   Flummox,
   FluxComponent,
+  Immutable,
   PanelsFeed,
   React
 };
@@ -16,39 +33,3 @@ window.Playground = Playground;
 console.log('Welcome to panels-feed playground.');
 console.log('https://feed.usepanels.com');
 console.log('Playground module', Playground);
-
-class BoxCard extends React.Component {
-  render() {
-    return <div>BoxCard {this.props.id}</div>;
-  }
-}
-
-class Property extends React.Component {
-  render() {
-    return <div>Property {this.props.id}</div>;
-  }
-}
-
-class WeatherReport extends React.Component {
-  render() {
-    return <div>WeatherReport {this.props.id}</div>;
-  }
-}
-
-const TYPES = {
-  BoxCard,
-  Property,
-  WeatherReport
-}
-
-const flux = new PanelsFeed.App();
-const feedActions = flux.getActions('feed');
-feedActions.loadCards(DUMMY_DATA);
-feedActions.loadTypes(TYPES);
-
-React.render(
-  <FluxComponent flux={flux}>
-    <FeedContainer />
-  </FluxComponent>,
-  document.getElementById('playground-container')
-);
