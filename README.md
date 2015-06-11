@@ -1,3 +1,5 @@
+**Use https://github.com/UXtemple/panels-runtime instead**
+
 # panels-feed
 
 A feed for panels to display multiple cards at once.
